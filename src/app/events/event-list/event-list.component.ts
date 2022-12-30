@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { EventService } from '../events.service';
 
 @Component({
-  selector: 'event-list',
   templateUrl: './event-list.component.html',
 })
 export class EventListComponent implements OnInit {
