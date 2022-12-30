@@ -6,7 +6,7 @@ export class EventService {
     return EVENTS;
   }
   getEvent(id: number) {
-    return EVENTS.filter((e) => e.id === id);
+    return EVENTS.find((e) => e.id === id);
   }
 }
 
