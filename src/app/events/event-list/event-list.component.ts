@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { EventService } from '../events.service';
 
 @Component({
   selector: 'event-list',
   templateUrl: './event-list.component.html',
 })
-export class EventListComponent {
+export class EventListComponent implements OnInit {
   events: any[];
 
   constructor(private eventService: EventService) {
@@ -13,7 +13,8 @@ export class EventListComponent {
     // this.events = this.eventService.getData();
   }
 
-  ngOnInt() {
-    this.events = this.eventService.getData();
+  ngOnInit() {
+    console.log('Oninit');
+    this.events = this.eventService.getEvents();
   }
 }
